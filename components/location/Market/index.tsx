@@ -1,5 +1,5 @@
+import Icon from "@/components/Icon"
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import { MERCHANDISE } from "@/constants/merchandise"
 import { useMarket } from "@/hooks/queries/useMarket"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
@@ -25,7 +25,7 @@ const Market = () => {
             key={`market-${item}`}
             title={capitalize(item)}
             indicator={player?.inventory?.[inventoryItem]?.toString() || "0"}
-            icon={<MerchandiseIcon item={inventoryItem} />}
+            icon={<Icon item={inventoryItem} />}
             body={
               <>
                 <p>

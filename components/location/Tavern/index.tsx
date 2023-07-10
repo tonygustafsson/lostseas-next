@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { GiPirateCaptain } from "react-icons/gi"
 
 import ActionCard from "@/components/ActionCard"
+import Icon from "@/components/Icon"
 import LocationTabs from "@/components/LocationTabs"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 import { useTavern } from "@/hooks/queries/useTavern"
@@ -36,7 +36,7 @@ const Tavern = () => {
           <ActionCard
             title={`${player?.locationStates?.tavern?.noOfSailors} sailors approach you`}
             message="After a couple of drinks and a few games of cards, it turns out they want to join you on your adventure."
-            icon={<GiPirateCaptain className="w-20 h-20 text-secondary" />}
+            icon={<Icon item="captain" className="w-20 h-20 text-secondary" />}
             actions={
               <>
                 <button
@@ -61,7 +61,7 @@ const Tavern = () => {
           <ActionCard
             title={`${player?.locationStates?.tavern?.noOfSailors} sailors approach you`}
             message="After a couple of drinks they start to get aggressive and want to fight you."
-            icon={<GiPirateCaptain className="w-20 h-20 text-secondary" />}
+            icon={<Icon item="captain" className="w-20 h-20 text-secondary" />}
             actions={
               <>
                 <button

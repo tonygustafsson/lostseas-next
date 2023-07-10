@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next"
 
+import Icon from "@/components/Icon"
 import DefaultLayout from "@/components/layouts/default"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import { MERCHANDISE } from "@/constants/merchandise"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 import { getLoggedInServerSideProps } from "@/utils/next/getLoggedInServerSideProps"
@@ -30,7 +30,7 @@ const Inventory = () => {
             key={`inventory-${item}`}
           >
             <div className="stat-figure text-secondary">
-              <MerchandiseIcon size="lg" item={item as keyof Inventory} />
+              <Icon size="lg" item={item as keyof Inventory} />
             </div>
             <div className="stat-title">{capitalize(item)}</div>
             <div className="stat-value">

@@ -1,8 +1,8 @@
 import Link from "next/link"
-import { GiPirateFlag } from "react-icons/gi"
 
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 
+import Icon from "../Icon"
 import CharacterCard from "./CharacterCard"
 import MainMenu from "./MainMenu"
 import WeatherCard from "./WeatherCard"
@@ -20,7 +20,7 @@ const DesktopMenu = ({ className }: Props) => {
         href="/"
         className="flex font-serif text-3xl gap-3 items-center mb-4 mx-2"
       >
-        <GiPirateFlag className="h-8 w-8" /> Lost Seas
+        <Icon item="pirate-flag" className="h-8 w-8" /> Lost Seas
       </Link>
 
       <MainMenu />

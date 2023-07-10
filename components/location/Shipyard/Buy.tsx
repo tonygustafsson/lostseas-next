@@ -1,5 +1,5 @@
+import Icon, { IconType } from "@/components/Icon"
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import MerchandiseShopItem from "@/components/MerchandiseShopItem"
 import { MERCHANDISE } from "@/constants/merchandise"
 import { SHIP_TYPES } from "@/constants/ship"
@@ -20,7 +20,7 @@ const ShipyardBuy = () => {
         <MerchandiseCard
           key={`shipyard-buy-${shipType}`}
           title={shipType}
-          icon={<MerchandiseIcon item={shipType} />}
+          icon={<Icon item={shipType as IconType} />}
           body={
             <>
               <p>{description}</p>

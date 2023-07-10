@@ -1,8 +1,8 @@
 import { GetServerSideProps } from "next"
 
+import Icon, { IconType } from "@/components/Icon"
 import DefaultLayout from "@/components/layouts/default"
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import RadialProgressBar from "@/components/RadialProgressBar"
 import RenameShipForm from "@/components/RenameShipForm"
 import { useModal } from "@/components/ui/Modal/context"
@@ -51,7 +51,7 @@ const Ships = () => {
               <MerchandiseCard
                 key={`ships-${ship.name}`}
                 title={`${ship.name} (${ship.type})`}
-                icon={<MerchandiseIcon item={ship.type} />}
+                icon={<Icon item={ship.type.toLowerCase() as IconType} />}
                 body={
                   <>
                     <p>{shipInfo.description}</p>

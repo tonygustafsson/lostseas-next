@@ -1,8 +1,6 @@
-import { AiOutlineShop } from "react-icons/ai"
-import { BsTools } from "react-icons/bs"
-import { GiBank, GiFarmer, GiTavernSign } from "react-icons/gi"
-
 import { useCharacter } from "@/hooks/queries/useCharacter"
+
+import Icon from "../Icon"
 
 type Props = {
   location: Character["location"]
@@ -17,19 +15,19 @@ const TownActions = ({ location }: Props) => {
 
   const TownMoveMap = {
     Shop: {
-      icon: <AiOutlineShop className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon item="shop" className="text-cyan-600 w-6 h-6" />,
     },
     Tavern: {
-      icon: <GiTavernSign className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon item="tavern" className="text-cyan-600 w-6 h-6" />,
     },
     Bank: {
-      icon: <GiBank className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon item="bank" className="text-cyan-600 w-6 h-6" />,
     },
     Market: {
-      icon: <GiFarmer className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon item="market" className="text-cyan-600 w-6 h-6" />,
     },
     Shipyard: {
-      icon: <BsTools className="text-cyan-600 w-5 h-5" />,
+      icon: <Icon item="shipyard" className="text-cyan-600 w-5 h-5" />,
     },
   }
 

@@ -1,5 +1,5 @@
+import Icon from "@/components/Icon"
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import { TAVERN_ITEMS } from "@/constants/tavern"
 import { useTavern } from "@/hooks/queries/useTavern"
 import { capitalize } from "@/utils/string"
@@ -24,7 +24,7 @@ const ShopItem = ({ player, item }: Props) => {
     <MerchandiseCard
       key={`market-${item}`}
       title={capitalize(item)}
-      icon={<MerchandiseIcon item={item} />}
+      icon={<Icon item={item} />}
       disabled={buyingDisabled}
       body={
         <>

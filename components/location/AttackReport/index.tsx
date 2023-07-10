@@ -1,9 +1,10 @@
 import { Fragment } from "react"
 
+import Icon from "@/components/Icon"
 import { MERCHANDISE } from "@/constants/merchandise"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 
-const ShopBuy = () => {
+const AttackReport = () => {
   const { data: player } = useGetPlayer()
 
   const successReport = player?.locationStates?.sea?.attackSuccessReport
@@ -14,9 +15,10 @@ const ShopBuy = () => {
       <h2 className="text-3xl font-serif mb-4">Report</h2>
 
       {successReport && (
-        <ul className="list-disc list-inside">
+        <ul className="flex flex-col gap-2">
           {successReport.lootedGold && (
-            <li className="list-item">
+            <li className="flex gap-2 align-middle">
+              <Icon item="gold" className="text-primary" />
               Your looted {successReport.lootedGold} gold and now have a total
               of {player.character.gold} gold.
             </li>
@@ -100,4 +102,4 @@ const ShopBuy = () => {
   )
 }
 
-export default ShopBuy
+export default AttackReport

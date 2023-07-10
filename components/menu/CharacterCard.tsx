@@ -1,7 +1,7 @@
 import { m as motion } from "framer-motion"
 import Link from "next/link"
-import { GiCoins, GiPirateHat } from "react-icons/gi"
 
+import Icon from "../Icon"
 import Flag from "../icons/Flag"
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
 const CharacterCard = ({ character }: Props) => (
   <div className="card w-full bg-gray-800 shadow-lg mt-2 lg:mt-8 rounded-md">
     <figure className="mt-4">
-      <GiPirateHat className="hidden lg:block h-14 w-14" />
+      <Icon item="pirate-hat" className="hidden lg:block h-14 w-14" />
     </figure>
 
     <div className="card-body p-6 pt-2">
@@ -32,7 +32,7 @@ const CharacterCard = ({ character }: Props) => (
       <div className="stats bg-gray-800">
         <div className="stat px-0 py-2">
           <div className="stat-figure text-secondary">
-            <GiCoins className="h-8 w-8" />
+            <Icon item="gold" className="h-8 w-8" />
           </div>
           <p className="stat-title">Gold</p>
           <motion.p

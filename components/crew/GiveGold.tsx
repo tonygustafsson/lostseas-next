@@ -1,11 +1,12 @@
 import { useMemo, useState } from "react"
 
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import TextField from "@/components/ui/TextField"
 import { useCrew } from "@/hooks/queries/useCrew"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 import { getGoldEffectiveness } from "@/utils/crew"
+
+import Icon from "../Icon"
 
 const GiveGold = () => {
   const { data: player } = useGetPlayer()
@@ -54,7 +55,7 @@ const GiveGold = () => {
     <MerchandiseCard
       title="Give gold"
       indicator={player?.character.gold?.toString() || "0"}
-      icon={<MerchandiseIcon item="Gold" />}
+      icon={<Icon item="gold" />}
       disabled={isDisabled}
       fullWidth
       body={

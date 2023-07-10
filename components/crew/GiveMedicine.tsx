@@ -1,12 +1,13 @@
 import { useMemo, useState } from "react"
 
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import TextField from "@/components/ui/TextField"
 import { MERCHANDISE } from "@/constants/merchandise"
 import { useCrew } from "@/hooks/queries/useCrew"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 import { getMedicineEffectiveness } from "@/utils/crew"
+
+import Icon from "../Icon"
 
 const GiveMedicine = () => {
   const { data: player } = useGetPlayer()
@@ -55,7 +56,7 @@ const GiveMedicine = () => {
     <MerchandiseCard
       title="Give medicine"
       indicator={player?.inventory?.medicine?.toString() || "0"}
-      icon={<MerchandiseIcon item="Medicine" />}
+      icon={<Icon item="medicine" />}
       disabled={isDisabled}
       fullWidth
       body={

@@ -1,17 +1,9 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { FiLogIn, FiLogOut, FiSettings, FiUserPlus } from "react-icons/fi"
-import {
-  GiHoodedFigure,
-  GiOpenedFoodCan,
-  GiPirateCoat,
-  GiPirateHat,
-  GiShoonerSailboat,
-} from "react-icons/gi"
-import { RiTreasureMapLine } from "react-icons/ri"
 
 import { useGetPlayer, usePlayer } from "@/hooks/queries/usePlayer"
 
+import Icon from "../Icon"
 import Map from "../Map"
 import { useModal } from "../ui/Modal/context"
 
@@ -39,14 +31,14 @@ const MainMenu = () => {
         <>
           <li className={`${pathname === "/" ? "active" : ""}`}>
             <Link href="/">
-              <GiPirateHat className="h-5 w-5" />
+              <Icon item="pirate-hat" className="h-5 w-5" />
               Play
             </Link>
           </li>
 
           <li>
             <button onClick={showMap} disabled={!!player.character.journey}>
-              <RiTreasureMapLine className="h-5 w-5" />
+              <Icon item="map" className="h-5 w-5" />
               Map
             </button>
           </li>
@@ -55,14 +47,14 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/status" ? "active" : ""}`}>
             <Link href="/status">
-              <GiPirateCoat className="h-5 w-5" />
+              <Icon item="pirate-coat" className="h-5 w-5" />
               Status
             </Link>
           </li>
 
           <li className={`${pathname === "/ships" ? "active" : ""}`}>
             <Link href="/ships">
-              <GiShoonerSailboat className="h-5 w-5" />
+              <Icon item="galleon" className="h-5 w-5" />
               Ships
               <span className="badge badge-sm badge-primary">
                 {numberOfShips}
@@ -72,7 +64,7 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/crew" ? "active" : ""}`}>
             <Link href="/crew">
-              <GiHoodedFigure className="h-5 w-5" />
+              <Icon item="crew" className="h-5 w-5" />
               Crew members
               <span className="badge badge-sm badge-primary">
                 {player?.crewMembers.count}
@@ -82,7 +74,7 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/inventory" ? "active" : ""}`}>
             <Link href="/inventory">
-              <GiOpenedFoodCan className="h-5 w-5" />
+              <Icon item="inventory" className="h-5 w-5" />
               Inventory
               <span className="badge badge-sm badge-primary">
                 {numberOfInventoryItems}
@@ -94,14 +86,14 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/settings" ? "active" : ""}`}>
             <Link href="/settings">
-              <FiSettings className="h-5 w-5" />
+              <Icon item="settings" className="h-5 w-5" />
               Settings
             </Link>
           </li>
 
           <li>
             <a onClick={() => logout()}>
-              <FiLogOut className="h-5 w-5" />
+              <Icon item="signout" className="h-5 w-5" />
               Sign out
             </a>
           </li>
@@ -110,14 +102,14 @@ const MainMenu = () => {
         <>
           <li className={`${pathname === "/login" ? "active" : ""}`}>
             <Link href="/login">
-              <FiLogIn className="h-5 w-5" />
+              <Icon item="signin" className="h-5 w-5" />
               Sign in
             </Link>
           </li>
 
           <li className={`${pathname === "/register" ? "active" : ""}`}>
             <Link href="/register">
-              <FiUserPlus className="h-5 w-5" />
+              <Icon item="register" className="h-5 w-5" />
               Register
             </Link>
           </li>

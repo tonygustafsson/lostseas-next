@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 import MerchandiseCard from "@/components/MerchandiseCard"
-import MerchandiseIcon from "@/components/MerchandiseIcon"
 import { MERCHANDISE } from "@/constants/merchandise"
 import { capitalize } from "@/utils/string"
 
+import Icon from "./Icon"
 import TextField from "./ui/TextField"
 
 type Props = {
@@ -63,7 +63,7 @@ const MerchandiseShopItem = ({ player, item, type, onBuy, onSell }: Props) => {
     <MerchandiseCard
       title={capitalize(item)}
       indicator={player?.inventory?.[item]?.toString() || "0"}
-      icon={<MerchandiseIcon item={item} />}
+      icon={<Icon item={item} />}
       disabled={type === "Buy" ? buyingDisabled : sellingDisabled}
       body={
         <>
