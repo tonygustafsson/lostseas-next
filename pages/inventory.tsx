@@ -30,7 +30,7 @@ const Inventory = () => {
             key={`inventory-${item}`}
           >
             <div className="stat-figure text-secondary">
-              <Icon size="lg" item={item as keyof Inventory} />
+              <Icon size="lg" type={item as keyof Inventory} />
             </div>
             <div className="stat-title">{capitalize(item)}</div>
             <div className="stat-value">
