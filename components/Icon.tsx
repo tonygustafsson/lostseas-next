@@ -1,6 +1,19 @@
-import { AiOutlineShop } from "react-icons/ai"
-import { BsTools } from "react-icons/bs"
-import { FiLogIn, FiLogOut, FiSettings, FiUserPlus } from "react-icons/fi"
+import {
+  AiOutlineCalendar,
+  AiOutlineCloseCircle,
+  AiOutlineShop,
+} from "react-icons/ai"
+import { BiFemaleSign, BiMaleSign, BiTime } from "react-icons/bi"
+import { BsClipboardCheck, BsTools } from "react-icons/bs"
+import { FaUsers } from "react-icons/fa"
+import {
+  FiCheckCircle,
+  FiLogIn,
+  FiLogOut,
+  FiSettings,
+  FiUserPlus,
+  FiXCircle,
+} from "react-icons/fi"
 import {
   GiBank,
   GiBrandyBottle,
@@ -41,7 +54,16 @@ type IconMerchandiseType =
   | "medicine"
   | "cannons"
 type IconShipType = "brig" | "merchantman" | "galleon" | "frigate"
-type IconSystemType = "settings" | "signin" | "signout" | "register" | "menu"
+type IconSystemType =
+  | "settings"
+  | "signin"
+  | "signout"
+  | "register"
+  | "menu"
+  | "close"
+  | "success"
+  | "error"
+  | "clipboard"
 type IconMiscType =
   | "captain"
   | "pirate-hat"
@@ -51,6 +73,11 @@ type IconMiscType =
   | "crew"
   | "inventory"
   | "gold"
+  | "users"
+  | "clock"
+  | "calendar"
+  | "male"
+  | "female"
 
 export type IconType =
   | IconPlaceType
@@ -142,6 +169,14 @@ const Icon = ({ item, size, className = "" }: Props) => {
       return <FiUserPlus className={iconClass} />
     case "menu":
       return <HiMenu className={iconClass} />
+    case "close":
+      return <AiOutlineCloseCircle className={iconClass} />
+    case "success":
+      return <FiCheckCircle className={iconClass} />
+    case "error":
+      return <FiXCircle className={iconClass} />
+    case "clipboard":
+      return <BsClipboardCheck className={iconClass} />
 
     // Misc
     case "gold":
@@ -160,6 +195,16 @@ const Icon = ({ item, size, className = "" }: Props) => {
       return <GiHoodedFigure className={iconClass} />
     case "inventory":
       return <GiOpenedFoodCan className={iconClass} />
+    case "users":
+      return <FaUsers className={iconClass} />
+    case "clock":
+      return <BiTime className={iconClass} />
+    case "calendar":
+      return <AiOutlineCalendar className={iconClass} />
+    case "male":
+      return <BiMaleSign className={iconClass} />
+    case "female":
+      return <BiFemaleSign className={iconClass} />
 
     default:
       return null

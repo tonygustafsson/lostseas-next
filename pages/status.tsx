@@ -1,10 +1,8 @@
 import { GetServerSideProps } from "next"
 import Link from "next/link"
-import { AiOutlineCalendar } from "react-icons/ai"
-import { BiFemaleSign, BiMaleSign, BiTime } from "react-icons/bi"
-import { GiCoins } from "react-icons/gi"
 
 import ChangeCharacterForm from "@/components/ChangeCharacterForm"
+import Icon from "@/components/Icon"
 import Flag from "@/components/icons/Flag"
 import DefaultLayout from "@/components/layouts/default"
 import { useModal } from "@/components/ui/Modal/context"
@@ -55,7 +53,7 @@ const Status = () => {
 
             <div className="stat bg-gray-700">
               <div className="stat-figure text-secondary">
-                <BiTime className="h-8 w-8" />
+                <Icon item="clock" className="h-8 w-8" />
               </div>
               <div className="stat-title">Age</div>
               <div className="stat-value">{player?.character.age}</div>
@@ -64,9 +62,9 @@ const Status = () => {
             <div className="stat bg-gray-700">
               <div className="stat-figure text-secondary">
                 {player.character.gender === "Male" ? (
-                  <BiMaleSign className="h-8 w-8" />
+                  <Icon item="male" className="h-8 w-8" />
                 ) : (
-                  <BiFemaleSign className="h-8 w-8" />
+                  <Icon item="female" className="h-8 w-8" />
                 )}
               </div>
               <div className="stat-title">Gender</div>
@@ -86,7 +84,7 @@ const Status = () => {
           <div className="stats gap-4 mt-4">
             <div className="stat bg-gray-700">
               <div className="stat-figure text-secondary">
-                <GiCoins className="h-8 w-8" />
+                <Icon item="gold" className="h-8 w-8" />
               </div>
               <div className="stat-title">Gold</div>
               <div className="stat-value">{player?.character.gold}</div>
@@ -95,7 +93,7 @@ const Status = () => {
             {player?.character.account && (
               <div className="stat bg-gray-700">
                 <div className="stat-figure text-secondary">
-                  <GiCoins className="h-8 w-8" />
+                  <Icon item="gold" className="h-8 w-8" />
                 </div>
                 <div className="stat-title">Bank account</div>
                 <div className="stat-value">{player?.character.account}</div>
@@ -105,7 +103,7 @@ const Status = () => {
             {player?.character.loan && (
               <div className="stat bg-gray-700">
                 <div className="stat-figure text-secondary">
-                  <GiCoins className="h-8 w-8" />
+                  <Icon item="gold" className="h-8 w-8" />
                 </div>
                 <div className="stat-title">Bank loan</div>
                 <div className="stat-value">{player?.character.loan}</div>
@@ -116,7 +114,7 @@ const Status = () => {
           <div className="stats gap-4 mt-4">
             <div className="stat bg-gray-700">
               <div className="stat-figure text-secondary">
-                <AiOutlineCalendar className="h-8 w-8" />
+                <Icon item="calendar" className="h-8 w-8" />
               </div>
               <div className="stat-title">Has been playing for</div>
               <div className="stat-value">{player?.character.day} days</div>
@@ -124,7 +122,7 @@ const Status = () => {
 
             <div className="stat bg-gray-700">
               <div className="stat-figure text-secondary">
-                <AiOutlineCalendar className="h-8 w-8" />
+                <Icon item="calendar" className="h-8 w-8" />
               </div>
               <div className="stat-title">Current date</div>
               <div className="stat-value">{currentDate}</div>

@@ -1,5 +1,6 @@
 import { useEffect } from "react"
-import { AiOutlineCloseCircle } from "react-icons/ai"
+
+import Icon from "@/components/Icon"
 
 import { useModal } from "./context"
 
@@ -47,7 +48,7 @@ const Modal = () => {
                 className="btn btn-sm bg-transparent border-none hover:bg-gray-800 absolute right-1 top-3 close"
                 onClick={() => removeModal(modal.id || "")}
               >
-                <AiOutlineCloseCircle className="h-7 w-7" />
+                <Icon item="close" className="h-7 w-7" />
               </button>
             </div>
           </div>

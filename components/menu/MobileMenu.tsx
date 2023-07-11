@@ -1,10 +1,9 @@
 import { AnimatePresence, m as motion, PanInfo } from "framer-motion"
 import { useState } from "react"
-import { AiOutlineCloseCircle } from "react-icons/ai"
-import { GiPirateFlag } from "react-icons/gi"
 
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 
+import Icon from "../Icon"
 import CharacterCard from "./CharacterCard"
 import MainMenu from "./MainMenu"
 import MobileBottomNav from "./MobileBottomNav"
@@ -28,7 +27,7 @@ const MobileMenu = ({ className }: Props) => {
   return (
     <div className={className}>
       <h1 className="font-serif text-2xl text-center p-2 flex justify-center items-center gap-2 bg-gray-900">
-        <GiPirateFlag className="h-6 w-6" /> Lost Seas
+        <Icon item="pirate-flag" className="h-6 w-6" /> Lost Seas
       </h1>
 
       <MobileBottomNav setMobileMenuOpen={setMobileMenuOpen} />
@@ -58,7 +57,7 @@ const MobileMenu = ({ className }: Props) => {
                 className="absolute right-2 top-2 text-info"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                <AiOutlineCloseCircle className="h-6 w-6" />
+                <Icon item="close" className="h-6 w-6" />
               </button>
 
               <MainMenu />

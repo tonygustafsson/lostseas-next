@@ -1,8 +1,8 @@
 import { GetServerSideProps } from "next"
-import { FaUsers } from "react-icons/fa"
 
 import GiveGold from "@/components/crew/GiveGold"
 import GiveMedicine from "@/components/crew/GiveMedicine"
+import Icon from "@/components/Icon"
 import DefaultLayout from "@/components/layouts/default"
 import RadialProgressBar from "@/components/RadialProgressBar"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
@@ -23,7 +23,7 @@ const Crew = () => {
         <div className="stats bg-transparent gap-2 mt-4">
           <div className="stat bg-gray-700">
             <div className="stat-figure text-secondary">
-              <FaUsers className="h-10 w-10" />
+              <Icon item="users" className="h-10 w-10" />
             </div>
             <div className="stat-title">Count</div>
             <div className="stat-value text-2xl">

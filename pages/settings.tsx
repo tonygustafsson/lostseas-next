@@ -1,8 +1,8 @@
 import { GetServerSideProps } from "next"
 import { useQRCode } from "next-qrcode"
 import { useState } from "react"
-import { BsClipboardCheck } from "react-icons/bs"
 
+import Icon from "@/components/Icon"
 import DefaultLayout from "@/components/layouts/default"
 import { useGetPlayer } from "@/hooks/queries/usePlayer"
 import { getLoggedInServerSideProps } from "@/utils/next/getLoggedInServerSideProps"
@@ -53,7 +53,7 @@ const Settings = () => {
             {copiedToClipboard ? (
               <span className="text-sm">Copied!</span>
             ) : (
-              <BsClipboardCheck className="w-6 h-6" />
+              <Icon item="clipboard" className="w-6 h-6" />
             )}
           </button>
         </div>
