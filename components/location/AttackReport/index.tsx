@@ -18,7 +18,7 @@ const AttackReport = () => {
         <ul className="flex flex-col gap-2">
           {successReport.lootedGold && (
             <li className="flex gap-2 align-middle">
-              <Icon item="gold" className="text-primary" />
+              <Icon type="gold" className="text-primary" />
               Your looted {successReport.lootedGold} gold and now have a total
               of {player.character.gold} gold.
             </li>

@@ -55,7 +55,7 @@ const GiveGold = () => {
     <MerchandiseCard
       title="Give gold"
       indicator={player?.character.gold?.toString() || "0"}
-      icon={<Icon item="gold" />}
+      icon={<Icon type="gold" />}
       disabled={isDisabled}
       fullWidth
       body={

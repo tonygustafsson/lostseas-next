@@ -31,14 +31,14 @@ const MainMenu = () => {
         <>
           <li className={`${pathname === "/" ? "active" : ""}`}>
             <Link href="/">
-              <Icon item="pirate-hat" className="h-5 w-5" />
+              <Icon type="pirate-hat" className="h-5 w-5" />
               Play
             </Link>
           </li>
 
           <li>
             <button onClick={showMap} disabled={!!player.character.journey}>
-              <Icon item="map" className="h-5 w-5" />
+              <Icon type="map" className="h-5 w-5" />
               Map
             </button>
           </li>
@@ -47,14 +47,14 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/status" ? "active" : ""}`}>
             <Link href="/status">
-              <Icon item="pirate-coat" className="h-5 w-5" />
+              <Icon type="pirate-coat" className="h-5 w-5" />
               Status
             </Link>
           </li>
 
           <li className={`${pathname === "/ships" ? "active" : ""}`}>
             <Link href="/ships">
-              <Icon item="galleon" className="h-5 w-5" />
+              <Icon type="galleon" className="h-5 w-5" />
               Ships
               <span className="badge badge-sm badge-primary">
                 {numberOfShips}
@@ -64,7 +64,7 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/crew" ? "active" : ""}`}>
             <Link href="/crew">
-              <Icon item="crew" className="h-5 w-5" />
+              <Icon type="crew" className="h-5 w-5" />
               Crew members
               <span className="badge badge-sm badge-primary">
                 {player?.crewMembers.count}
@@ -74,7 +74,7 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/inventory" ? "active" : ""}`}>
             <Link href="/inventory">
-              <Icon item="inventory" className="h-5 w-5" />
+              <Icon type="inventory" className="h-5 w-5" />
               Inventory
               <span className="badge badge-sm badge-primary">
                 {numberOfInventoryItems}
@@ -86,14 +86,14 @@ const MainMenu = () => {
 
           <li className={`${pathname === "/settings" ? "active" : ""}`}>
             <Link href="/settings">
-              <Icon item="settings" className="h-5 w-5" />
+              <Icon type="settings" className="h-5 w-5" />
               Settings
             </Link>
           </li>
 
           <li>
             <a onClick={() => logout()}>
-              <Icon item="signout" className="h-5 w-5" />
+              <Icon type="signout" className="h-5 w-5" />
               Sign out
             </a>
           </li>
@@ -102,14 +102,14 @@ const MainMenu = () => {
         <>
           <li className={`${pathname === "/login" ? "active" : ""}`}>
             <Link href="/login">
-              <Icon item="signin" className="h-5 w-5" />
+              <Icon type="signin" className="h-5 w-5" />
               Sign in
             </Link>
           </li>
 
           <li className={`${pathname === "/register" ? "active" : ""}`}>
             <Link href="/register">
-              <Icon item="register" className="h-5 w-5" />
+              <Icon type="register" className="h-5 w-5" />
               Register
             </Link>
           </li>

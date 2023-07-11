@@ -56,7 +56,7 @@ const GiveMedicine = () => {
     <MerchandiseCard
       title="Give medicine"
       indicator={player?.inventory?.medicine?.toString() || "0"}
-      icon={<Icon item="medicine" />}
+      icon={<Icon type="medicine" />}
       disabled={isDisabled}
       fullWidth
       body={

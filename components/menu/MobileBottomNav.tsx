@@ -28,19 +28,19 @@ const MobileBottomNav = ({ setMobileMenuOpen }: Props) => {
   return (
     <div className="btm-nav z-10">
       <Link href="/" className={`${pathname === "/" ? "active" : ""}`}>
-        <Icon item="pirate-hat" className="h-5 w-5" />
+        <Icon type="pirate-hat" className="h-5 w-5" />
         Play
       </Link>
 
       <button
         onClick={() => setMobileMenuOpen((mobileMenuOpen) => !mobileMenuOpen)}
       >
-        <Icon item="menu" className="h-5 w-5" />
+        <Icon type="menu" className="h-5 w-5" />
         Menu
       </button>
 
       <button onClick={showMap} disabled={!!player?.character.journey}>
-        <Icon item="map" className="h-5 w-5" />
+        <Icon type="map" className="h-5 w-5" />
         Map
       </button>
     </div>

@@ -51,7 +51,7 @@ const Ships = () => {
               <MerchandiseCard
                 key={`ships-${ship.name}`}
                 title={`${ship.name} (${ship.type})`}
-                icon={<Icon item={ship.type.toLowerCase() as IconType} />}
+                icon={<Icon type={ship.type.toLowerCase() as IconType} />}
                 body={
                   <>
                     <p>{shipInfo.description}</p>

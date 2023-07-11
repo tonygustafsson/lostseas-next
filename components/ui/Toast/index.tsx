@@ -33,10 +33,10 @@ const Toast = () => {
               <div className="alert flex-col flex items-start gap-1 lg:gap-2">
                 <div className="flex gap-2 items-center">
                   {toast.variant === "success" && (
-                    <Icon item="success" className="text-success w-7 h-7 " />
+                    <Icon type="success" className="text-success w-7 h-7 " />
                   )}
                   {toast.variant === "error" && (
-                    <Icon item="error" className="text-error w-7 h-7 " />
+                    <Icon type="error" className="text-error w-7 h-7 " />
                   )}
                   <span className="title mr-8">{toast.title}</span>
                 </div>
@@ -48,7 +48,7 @@ const Toast = () => {
                 className="close"
                 onClick={() => removeToast(toast.id || "")}
               >
-                <Icon item="close" className="h-7 w-7" />
+                <Icon type="close" className="h-7 w-7" />
               </button>
             </motion.div>
           )}

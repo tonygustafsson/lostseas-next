@@ -20,7 +20,7 @@ const DesktopMenu = ({ className }: Props) => {
         href="/"
         className="flex font-serif text-3xl gap-3 items-center mb-4 mx-2"
       >
-        <Icon item="pirate-flag" className="h-8 w-8" /> Lost Seas
+        <Icon type="pirate-flag" className="h-8 w-8" /> Lost Seas
       </Link>
 
       <MainMenu />

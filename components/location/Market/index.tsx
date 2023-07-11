@@ -25,7 +25,7 @@ const Market = () => {
             key={`market-${item}`}
             title={capitalize(item)}
             indicator={player?.inventory?.[inventoryItem]?.toString() || "0"}
-            icon={<Icon item={inventoryItem} />}
+            icon={<Icon type={inventoryItem} />}
             body={
               <>
                 <p>

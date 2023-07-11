@@ -87,7 +87,7 @@ export type IconType =
   | IconMiscType
 
 type Props = {
-  item: IconType
+  type: IconType
   size?: "xs" | "sm" | "md" | "lg" | "xl"
   className?: string
 }
@@ -109,11 +109,11 @@ const getSizeClass = (size?: string) => {
   }
 }
 
-const Icon = ({ item, size, className = "" }: Props) => {
+const Icon = ({ type, size, className = "" }: Props) => {
   const sizeClass = getSizeClass(size)
   const iconClass = `${className} ${sizeClass}`
 
-  switch (item) {
+  switch (type) {
     // Merchandise
     case "food":
       return <GiMeat className={iconClass} />

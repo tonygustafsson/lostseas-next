@@ -23,7 +23,7 @@ const Crew = () => {
         <div className="stats bg-transparent gap-2 mt-4">
           <div className="stat bg-gray-700">
             <div className="stat-figure text-secondary">
-              <Icon item="users" className="h-10 w-10" />
+              <Icon type="users" className="h-10 w-10" />
             </div>
             <div className="stat-title">Count</div>
             <div className="stat-value text-2xl">

@@ -15,19 +15,19 @@ const TownActions = ({ location }: Props) => {
 
   const TownMoveMap = {
     Shop: {
-      icon: <Icon item="shop" className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon type="shop" className="text-cyan-600 w-6 h-6" />,
     },
     Tavern: {
-      icon: <Icon item="tavern" className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon type="tavern" className="text-cyan-600 w-6 h-6" />,
     },
     Bank: {
-      icon: <Icon item="bank" className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon type="bank" className="text-cyan-600 w-6 h-6" />,
     },
     Market: {
-      icon: <Icon item="market" className="text-cyan-600 w-6 h-6" />,
+      icon: <Icon type="market" className="text-cyan-600 w-6 h-6" />,
     },
     Shipyard: {
-      icon: <Icon item="shipyard" className="text-cyan-600 w-5 h-5" />,
+      icon: <Icon type="shipyard" className="text-cyan-600 w-5 h-5" />,
     },
   }
 

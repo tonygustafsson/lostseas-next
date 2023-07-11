@@ -27,7 +27,7 @@ const MobileMenu = ({ className }: Props) => {
   return (
     <div className={className}>
       <h1 className="font-serif text-2xl text-center p-2 flex justify-center items-center gap-2 bg-gray-900">
-        <Icon item="pirate-flag" className="h-6 w-6" /> Lost Seas
+        <Icon type="pirate-flag" className="h-6 w-6" /> Lost Seas
       </h1>
 
       <MobileBottomNav setMobileMenuOpen={setMobileMenuOpen} />
@@ -57,7 +57,7 @@ const MobileMenu = ({ className }: Props) => {
                 className="absolute right-2 top-2 text-info"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                <Icon item="close" className="h-6 w-6" />
+                <Icon type="close" className="h-6 w-6" />
               </button>
 
               <MainMenu />

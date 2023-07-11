@@ -53,7 +53,7 @@ const Settings = () => {
             {copiedToClipboard ? (
               <span className="text-sm">Copied!</span>
             ) : (
-              <Icon item="clipboard" className="w-6 h-6" />
+              <Icon type="clipboard" className="w-6 h-6" />
             )}
           </button>
         </div>

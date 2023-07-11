@@ -20,7 +20,7 @@ const ShipyardBuy = () => {
         <MerchandiseCard
           key={`shipyard-buy-${shipType}`}
           title={shipType}
-          icon={<Icon item={shipType as IconType} />}
+          icon={<Icon type={shipType as IconType} />}
           body={
             <>
               <p>{description}</p>
